@@ -273,3 +273,27 @@ function arraysEqual(arrA, arrB) {
 function objectsEqual(objA, objB) {
   return (JSON.stringify(objA) === JSON.stringify(objB))
 }
+
+function myKeys(object) {
+  // Create an empty array to store the keys
+  const keys = [];
+
+  // Loop through the object's enumerable properties and push their names into the array
+  for (let key in object) {
+    if (object.hasOwnProperty(key)) {
+      keys.push(key);
+    }
+  }
+
+  // Return the array of keys
+  return keys;
+}
+
+
+function myValues(object) {
+  const values = [];
+  for(let value  in object) {
+    values.push(object[value])
+  }
+  return values
+}
